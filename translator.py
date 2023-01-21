@@ -66,7 +66,7 @@ def output_menu(translated_text):
         case 'p':
             print_result(translated_text)
         case _:
-            print("Does messing with me bring you some kind of joy?")
+            print("Please, use built-in options!")
             output_menu(translated_text)
 
 
