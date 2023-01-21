@@ -2,81 +2,51 @@ from googletrans import Translator
 from langdetect import detect
 
 
-TARGET_LANG = 'en'
 translator = Translator()
 
 
-def start_menu():
-    print("""
-    Welcome to PyTranslate!
-    Please, choose one of the options below or push 'q' to quit the program:
-    - 't' - to input text manually;
-    - 'f' - to translate a .txt file.
-    """)
+class Text:
+    def initiate_text(filename):
+        with open(f'{filename}', 'r') as text_source:
+            raw_text = " ".join(text_source.readlines())
 
-    user_choice = str(input("Please, make a choice:  ")).lower()
+        return raw_text
 
-    match user_choice:
-        case 'q':
-            exit()
-        case 't':
-            read_input()
-        case 'f':
-            read_from_file()
-        case _:
-            print("Please, use built-in options!")
-            start_menu()
+    def language_detect(raw_text):
+        lang_suppose = detect(raw_text)
+        return lang_suppose
+
+    def translate(raw_text, lang_suppose, dest=None):
+        TARGET_LANG = 'en'
+        translated_text = translator.translate(raw_text, src=lang_suppose, dest=TARGET_LANG)
+        return translated_text
 
 
-def read_input():
-    raw_text = str(input("Please, enter your target text here:  "))
-
-    language_detect(raw_text)
+income_file = 'Ohne dich.txt'
+alien_text = Text.initiate_text(income_file)
 
 
-def read_from_file():
-    raw_text = ''
-
-    language_detect(raw_text)
-
-
-def language_detect(raw_text):
-    lang_suppose = detect(raw_text)
-
-    translate(raw_text, lang_suppose)
-
-
-def translate(alien_text, lang_suppose, dest=TARGET_LANG):
-    translated_text = translator.translate(alien_text, src=lang_suppose, dest=dest)
-
-    output_menu(translated_text)
-
-
-def output_menu(translated_text):
-    print("""Please, choose an output option:
-             - 'f' - to write the result to file;
-             - 'p' - to print the result to console;        
-          """)
-
-    trans_option = str(input("Please, choose an option:  ")).lower()
-
-    match trans_option:
-        case 'f':
-            write_to_file(translated_text)
-        case 'p':
-            print_result(translated_text)
-        case _:
-            print("Please, use built-in options!")
-            output_menu(translated_text)
+def text_work():
+    text_lang = Text.language_detect(alien_text)
+    translated_text = str(Text.translate(alien_text, text_lang))
+    write_to_file(translated_text)
 
 
 def write_to_file(translated_text):
-    ...
+    with open('translated_file.txt', 'w') as data:
+        data.write(translated_text + '\n')
+
+    compose_interlinear(income_file, 'translated_file.txt')
 
 
-def print_result(translated_text):
-    print(translated_text)
+def compose_interlinear(income_file, translated_file):
+    with open(income_file, 'r') as file1, open(translated_file, 'r') as file2, open('interlinear.txt', 'w') as file3:
+        file3.write(f'The file was translated automatically.\n'
+                    f'Source language is: {Text.language_detect(alien_text)}\n'
+                    f'Translation language is English.')
+        for p in zip(file1, file2):
+            print(*map(lambda s: s.strip(), p), sep='\n', file=file3)
 
 
 if __name__ == '__main__':
-    start_menu()
+    text_work()

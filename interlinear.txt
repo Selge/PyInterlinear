@@ -1,0 +1,38 @@
+The file was translated automatically.
+Source language is: de
+Translation language is English.Ich werde in die Tannen gehen
+Translated(src=de, dest=en, text=I will go into the firs
+Dahin, wo ich sie zuletzt gesehen
+To where I last seen them
+Doch der Abend wirft ein Tuch aufs Land
+But the evening throws a cloth into the country
+Und auf die Wege hinterm Waldesrand
+And on the way behind the edge of the forest
+Und der Wald, er steht so schwarz und leer
+And the forest, it stands so black and empty
+Weh mir, oh weh
+Pain me oh pain
+Und die Vögel singen nicht mehr
+And the vowels no longer sing
+
+
+Ohne dich kann ich nicht sein, ohne dich
+Without you I can't be without you
+Mit dir bin ich auch allein, ohne dich
+I am alone with you, without you
+Ohne dich zähl' ich die Stunden ohne dich
+Without you I do the hours without you
+Mit dir stehen die Sekunden, lohnen nicht
+The seconds are with you, don't be worth it
+
+
+Auf den Ästen, in den Gräben
+On the "Sten, in the borders
+Ist es nun still und ohne Leben
+Is it quiet now and without life
+Und das Atmen fällt mir ach so schwer
+And breathing is so difficult for me
+Weh mir, oh weh
+Pain me oh pain
+Und die Vögel singen nicht mehr
+And the vowels no longer sing, pronunciation=None, extra_data="{'confiden...")
