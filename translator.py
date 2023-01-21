@@ -21,7 +21,7 @@ class Text:
         return translated_text
 
 
-filename = 'Morto'
+filename = 'Lyrics'
 income_file = f'{filename}.txt'
 alien_text = Text.initiate_text(income_file)
 
