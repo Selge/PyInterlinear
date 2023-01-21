@@ -9,7 +9,6 @@ class Text:
     def initiate_text(filename):
         with open(f'{filename}', 'r') as text_source:
             raw_text = " ".join(text_source.readlines())
-
         return raw_text
 
     def language_detect(raw_text):
