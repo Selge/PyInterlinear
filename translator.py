@@ -49,12 +49,25 @@ def language_detect(raw_text):
 def translate(alien_text, lang_suppose, dest=TARGET_LANG):
     translated_text = translator.translate(alien_text, src=lang_suppose, dest=dest)
 
+    output_menu(translated_text)
+
+
+def output_menu(translated_text):
     print("""Please, choose an output option:
              - 'f' - to write the result to file;
              - 'p' - to print the result to console;        
           """)
 
-    write_to_file(translated_text)
+    trans_option = str(input("Please, choose an option:  ")).lower()
+
+    match trans_option:
+        case 'f':
+            write_to_file(translated_text)
+        case 'p':
+            print_result(translated_text)
+        case _:
+            print("Does messing with me bring you some kind of joy?")
+            output_menu(translated_text)
 
 
 def write_to_file(translated_text):
