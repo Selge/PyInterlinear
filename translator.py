@@ -22,7 +22,8 @@ class Text:
         return translated_text
 
 
-income_file = 'Ohne dich.txt'
+filename = 'Ohne dich'
+income_file = f'{filename}.txt'
 alien_text = Text.initiate_text(income_file)
 
 
@@ -33,14 +34,16 @@ def text_work():
 
 
 def write_to_file(translated_text):
-    with open('translated_file.txt', 'w') as data:
+    with open(f'{filename}_translated.txt', 'w') as data:
         data.write(translated_text + '\n')
 
-    compose_interlinear(income_file, 'translated_file.txt')
+    compose_interlinear(income_file, f'{filename}_translated.txt')
 
 
 def compose_interlinear(income_file, translated_file):
-    with open(income_file, 'r') as file1, open(translated_file, 'r') as file2, open('interlinear.txt', 'w') as file3:
+    with open(income_file, 'r') as file1, \
+         open(translated_file, 'r') as file2, \
+         open(f'{filename}_interlinear.txt', 'w') as file3:
         file3.write(f'The file was translated automatically.\n'
                     f'Source language is: {Text.language_detect(alien_text)}\n'
                     f'Translation language is English.')
