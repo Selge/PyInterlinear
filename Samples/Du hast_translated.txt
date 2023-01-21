@@ -1,0 +1,18 @@
+Translated(src=de, dest=en, text=You, you have, you've _______ me
+ 
+ You, you have, you have me, you have me
+ You asked me, you asked me
+ You asked me and I did not say anything
+ 
+ Will you until death do you part
+ Are you loyal to all days?
+ (Yes No
+ (Yes No
+ Do you want to be the death of the vagina
+ They love even in bad days?
+ (Yes No
+ (Yes No
+ Will you until death do you part
+ Be faithful to her
+ (Yes No
+ (Yes No, pronunciation=None, extra_data="{'confiden...")

@@ -21,7 +21,7 @@ class Text:
         return translated_text
 
 
-filename = 'Ohne dich'
+filename = 'Alberi'
 income_file = f'{filename}.txt'
 alien_text = Text.initiate_text(income_file)
 
@@ -45,7 +45,7 @@ def compose_interlinear(income_file, translated_file):
          open(f'{filename}_interlinear.txt', 'w') as file3:
         file3.write(f'The file was translated automatically.\n'
                     f'Source language is: {Text.language_detect(alien_text)}\n'
-                    f'Translation language is English.')
+                    f'Translation language is English.\n')
         for p in zip(file1, file2):
             print(*map(lambda s: s.strip(), p), sep='\n', file=file3)
 

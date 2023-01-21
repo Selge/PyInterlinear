@@ -1,7 +1,9 @@
 The file was translated automatically.
 Source language is: de
-Translation language is English.Ich werde in die Tannen gehen
-Translated(src=de, dest=en, text=I will go into the firs
+Translation language is English.
+
+Ich werde in die Tannen gehen
+I will go into the firs
 Dahin, wo ich sie zuletzt gesehen
 To where I last seen them
 Doch der Abend wirft ein Tuch aufs Land

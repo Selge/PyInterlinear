@@ -1,0 +1,11 @@
+Translated(src=it, dest=en, text=Trees,
+ You were arrows
+ Fallen from the blue?
+ What terrible warriors did they throw?
+ Was it the stars?
+ Your music come from the soul of birds,
+ from the eyes of God,
+ from a perfect passion.
+ Trees!
+ Your rough roots will notice
+ of my heart under the ground?, pronunciation=None, extra_data="{'confiden...")
